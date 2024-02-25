@@ -1,0 +1,55 @@
+/********************** Team Section ************************/
+.team-sec {
+    background: url('../../images/photo-pattern.jpg');
+    .team {
+        padding: 30px 0px;
+        // background-color: rgba(0,0,0,0.3);
+
+        .pt-team-sec-title {
+            margin-top: 30px;
+            font-weight: $font-weight-medium;
+        }
+
+        .pt-title-hightlight {
+            color: $highlight-text-red;
+        }
+    
+        .pt-line {
+            margin: 20px 0 5px 0;
+            height: 2px;
+            width: 12%;
+            background-color: $line-color-3;
+        }
+    
+        .pt-line2 {
+            margin: 0 0 50px 0;
+            height: 2px;
+            width: 10%;
+            background-color: $line-color-3;
+        }
+
+        .card {
+            .card-img-top {
+                height: 254px;
+                object-fit: cover;
+
+                @media #{$tablet} {
+                    height: 350px;
+                    object-fit: cover;
+                }
+            }
+            
+            .card-body {
+                text-align: center;
+                line-height: $line-height-sm;
+            }
+        }
+
+        
+
+        .pt-team-title {
+            font-size: $subheading;
+            font-weight: $font-weight-medium;
+        }
+    }
+}

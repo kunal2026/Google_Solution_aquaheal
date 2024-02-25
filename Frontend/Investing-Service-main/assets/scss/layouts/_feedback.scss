@@ -1,0 +1,21 @@
+/********************** Feeback Form Section ************************/
+.feedback-sec {
+    .feedback {
+        background-color: $highlight-text-red;
+    
+        .pt-feedback-sec-title { font-size: $heading-info; color: $base-color; margin-bottom: 20px; }
+    
+        .pt-feedback-sec-description { color: $base-color; }
+    
+        button {
+            color: $btn_color;
+            width: 90px;
+        }
+
+        @media #{$mobile} {
+            .col-md-6 {
+                margin-top: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+// layouts
+// @import 'layouts/reset';
+// base
+@import 'base/common';
+@import 'base/structure';
+
+// libs
+@import 'libs/variable';
+@import 'libs/color';
+
+// layouts
+// @import 'layouts/reset';
+@import 'layouts/header';
+@import 'layouts/hero';
+@import 'layouts/welcome';
+@import 'layouts/feature';
+@import 'layouts/team';
+@import 'layouts/service';
+@import 'layouts/testimonial';
+@import 'layouts/about-us';
+@import 'layouts/feedback';
+@import 'layouts/footer';
+@import 'layouts/contact';
+
+// @import 'base/common';
+// Component
+@import 'components/h1-hero';

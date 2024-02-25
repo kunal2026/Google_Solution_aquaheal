@@ -1,0 +1,143 @@
+/********************** Services Section ************************/
+
+.service-sec {
+    margin: 30px 0 60px 0;
+    .hightlight { color: $highlight-text-red; }
+
+    .pt-service-sec-title { font-weight: $font-weight-medium; margin-top: 30px; }
+
+    .pt-line {
+        margin: 20px 0 5px 0;
+        height: 2px;
+        // width: 12%;
+        width: 118px;
+        background-color: $line-color-3;
+    }
+    
+    .pt-line2 {
+        margin: 0 0 50px 0;
+        height: 2px;
+        // width: 10%;
+        width: 94px;
+        background-color: $line-color-3;
+    }
+    .expert-slider {
+        margin-top: 10px;
+        .service {
+            .service-img, svg {
+                height: 40px;
+                width: 40px;
+                margin-top: 1.2rem;
+            }
+    
+            .card {
+                // padding: 30px 0;
+                padding: 1rem 0;
+                .card-body {
+                    .pt-service-title { 
+                        font-size: $subheading;
+                    }
+                    .pt-service-description {
+                        line-height: $line-height-sm;
+                    }
+                }
+            }
+
+            .pt-service-title {
+                font-size: $heading-info;
+                margin-bottom: 0.75rem;
+                font-weight: $font-weight-medium;
+                color: $highlight-text-black;
+            }
+
+            .pt-service-description { color: $service-color; }
+        }
+    
+        .slick-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+            list-style: none;
+            padding: 0;
+        
+            .slick-active  button {
+                background-color: $primary-color;
+            }
+                
+            li {
+                padding: 0 3px;
+                button {
+                    border: 0;
+                    border-radius: 100%;
+                    font-size: 0;
+                    height: 12px;
+                    width: 12px;
+                    background-color: $line-color-3;  
+               }
+            }
+        }
+    }
+}
+
+
+/*************************** Service.html **************************/
+.experience {
+    padding: 50px 0px 30px 0px;
+    color: $base-color;
+    background: $extra-light;
+    svg {
+        height: 40px;
+        width: 40px;
+        fill: $base-color;
+        margin-bottom: 10px;
+    }
+    h1 { font-size: 2.6rem; }
+    p { font-size: 1.3rem; }
+
+    @media #{$mobile} {
+        .col-md-4:not(:last-child) {
+            margin-bottom: 35px;
+        }
+    }
+    // svg { fill: $base-color; }
+}
+
+.choose-us {
+    padding: 60px 0;
+
+    .pt-title-hightlight {
+        color: $highlight-text-red;
+    }
+
+    .pt-line {
+        margin: 20px 0 5px 0;
+        height: 2px;
+        // width: 12%;
+        width: 118px;
+        background-color: $line-color-3;
+    }
+    
+    .pt-line2 {
+        margin: 0 0 50px 0;
+        height: 2px;
+        // width: 10%;
+        width: 94px;
+        background-color: $line-color-3;
+    }
+
+    .checked {
+        height: 20px;
+        width: 20px;
+        margin: 2px 0px;
+    }
+
+    .pt-choose-us-sec-p {
+        padding: 0 0 0 20px;
+    }
+
+    @media #{$mobile} {
+        .col-md-6:not(:last-child) {
+            margin-bottom: 35px;
+        }
+    }
+}

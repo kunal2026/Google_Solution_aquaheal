@@ -1,0 +1,49 @@
+/********************** Testimonial Section ************************/
+.testimonial-sec {
+    .testimonial {
+        width: 100%;
+        // margin-top: 30px;
+        background: url('../../images/photo3.jpg');
+    
+        .overlay-testimonial{ 
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+    
+            color: #FFFFFF;
+            padding: 60px 0;
+            height: inherit;
+            background-color: $dark-overlay-opacity;
+    
+            h1 {
+                font-size: $heading-font;
+            }
+    
+            .pt-line {
+                margin: 20px 0 5px 0;
+                height: 2px;
+                width: 12%;
+                background-color: $line-color-2;
+            }
+            
+            .pt-line2 {
+                margin: 0 0 20px 0;
+                height: 2px;
+                width: 10%;
+                background-color: $line-color-2;
+            }
+    
+            button {
+                width: 130px;
+            }
+        }
+
+        .testimonial-img {
+            height: 80px;
+            width: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 30px 0;
+        }
+    }
+}

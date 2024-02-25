@@ -1,0 +1,102 @@
+.contact {
+    margin: 60px 0;
+    .pt-title-hightlight {
+        color: $highlight-text-red;
+    }
+
+    .pt-line {
+        margin: 20px 0 5px 0;
+        height: 2px;
+        // width: 12%;
+        width: 118px;
+        background-color: $line-color-3;
+    }
+    
+    .pt-line2 {
+        margin: 0 0 50px 0;
+        height: 2px;
+        // width: 10%;
+        width: 94px;
+        background-color: $line-color-3;
+    }
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        color: $base-color;
+
+        
+
+        .contact-info-sec { 
+            margin: 0 auto; 
+            padding: 40px 0; 
+            
+            h1 {
+                font-size: 1.6rem;
+                margin-bottom: 38px;
+            }
+
+            p { margin-bottom: 28px; }
+
+            .pt-contact-info-sec-social {
+                margin-top: 15px;
+                a {
+                    text-decoration: none;
+                    &:hover svg{
+                        fill: $dark-color;
+                        transition: fill 500ms linear; 
+                    }
+                }
+
+                a:not(:last-child){
+                    margin-right: 5px;
+                }
+
+                .contact-social-icon {
+                    // height: 45px;
+                    // width: 45px;
+                    height: 42px;
+                    width: 42px;
+                }
+    
+                
+            }
+            
+        }
+
+        p { padding-left: 20px; }
+        svg {
+            height: 20px;
+            width: 20px;
+            fill: $base-color;
+        }
+
+        .headphone-svg {
+            // height: 90px;
+            // width: 90px;
+            height: 120px;
+            width: 120px;
+            // transform: rotate(36deg);
+            transform: rotate(32deg);
+            position: relative;
+            // right: 44px;
+            right: 54px;
+        }
+    }
+
+    .contact-form {
+        box-shadow: 0px 1px 8px 1px gray;
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            padding: 40px 0;
+
+            .form-group, button {
+                width: 80%;
+            }
+        }
+    }
+}

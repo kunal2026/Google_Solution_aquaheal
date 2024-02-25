@@ -1,0 +1,209 @@
+// Google fonts import
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    
+    // Font Family
+
+    $font_1 :'Roboto', sans-serif;  //Heading
+    $font_2 :'Roboto', sans-serif;  //Body
+    $font_3 : 'Bebas Neue';
+
+    // Style ==============
+
+    $font-weight-light:           300 !default;
+    $font-weight-normal:          400 !default;
+    $font-weight-medium:          500!default;
+    $font-weight-semibold:        600!default;
+    $font-weight-bold:            700 !default;
+    $font-weight-bolder:          bolder!default;
+
+    // font size =================
+
+    $font-size-base:    1rem !default; // Assumes the browser default, typically `16px`
+    // $h1-font-size:      $font-size-base * 2.5 !default;
+    $h1-font-size:      $font-size-base * 2 !default; //32px
+    $h2-font-size:      $font-size-base * 2 !default;
+    $h3-font-size:      $font-size-base * 1.75 !default;
+    $h4-font-size:      $font-size-base * 1.5 !default;
+    $h5-font-size:      $font-size-base * 1.25 !default;
+    $h6-font-size:      $font-size-base !default;
+
+    // $heading-font:   2.6rem;
+    $top-heading: 0.9375rem;    // 15px
+    $heading-font:   2.5rem;    // 40px
+    $heading-info:   1.825rem;  // 30px
+    $subheading:     1.3125rem; // 21px
+    $blogheading:    0.875rem;  // 14px
+
+    // Line height
+    $line-height-base:   1.5 !default;
+    $line-height-sm:     1.25 !default;
+    $line-height-lg:     2 !default;
+
+    // z-index
+
+    $misc: 1;
+
+    /*Color Variables*/
+    $primary-color:     #ff0000;
+    $secondary-color: #16161a;
+
+    $dark-primary-color: #dc3545;
+
+    $light-color: #222222;   
+    $dark-color: #cb1011;   
+    $extra-light: #dc3545;
+
+    $base-color:        #ffffff;
+    $black_color:       #000000;
+    $gray-color:        #999999;
+    $offwhite       :   #f6f6f6;
+    $section_bg:        #f4f4f4;
+    $border_color:      #edeff2;
+    $title-color    :   #2a2a2a;
+
+
+    :root{
+        --data-color-primary: rgb(245, 121, 11);
+        --data-color-secondary: #4b4b4b;
+        
+        --primary-color:rgb(245, 121, 11);
+        --secondary-color:#{$secondary-color};
+        --base-color:#ffffff;
+        --black_color:#000000;
+        --gray-color:#999999;
+
+        --font_1 :'Josefin Sans', sans-serif; //Heading
+       --font_2 :'Roboto', sans-serif;     //Body
+        }
+
+
+
+    $text-color     :   #737171;
+    $highlight-text-red : #cb1011;
+    $highlight-text-black: #222222;
+    $overlay-opacity: rgba(0,0,0,0.3);
+    $dark-overlay-opacity: rgba(0,0,0,0.8);
+    $service-color: #686868;
+    $offwhite       :   #f6f6f6;
+    $white:             #ffffff;
+    $section_bg:        #f4f4f4;
+    $white_color:       #fff;
+    $black_color:       #000;
+    $menu_color:        #141517;
+    $icon_color:        #0c2e60;
+    $icon_bg:           #f0f4f6;
+    $author_text_color: #556172;
+
+    $line-color: #5b5556;
+    $line-color-2: #bfbebe;
+    $line-color-3: #87888b;
+
+    $footer-border-right-color: #727479;
+
+    $footer_bg-color: #222222;
+    $footer_p-color: #d1d1d1;
+
+    $about_p-color: #6d6e72;
+    // $h1: 30px;
+
+    $color_1: #f8fbff;
+    $color_2: #fffbf9;
+    $color_3: #fafafa;
+    $color_4: #fffcf4;
+
+    $btn_hover:      #f5790b;
+    $section_bg_1:   #e8f0f2;
+    $heading_color:  #4B3049;
+    $heading_color2: #ff8b23;
+
+    $font_4: #8a8a8a;
+    $font_5: #999999;
+    $font_6: #666666;
+    $font_7: #777777;
+    $font_8: #888888;
+    $font_d: #dddddd;
+    $border_color: #edeff2;
+    $footer_bg: #303030;
+    $sidebar_bg: #fbf9ff;
+
+    // Bishow Thapa
+    // $body_font_size: 15px;
+
+
+/*------------------- Responsive --------------------------*/
+
+    $laptop: 'only screen and (min-width: 1200px) and (max-width: 1600px)';
+    $lg :'only screen and (min-width: 992px) and (max-width: 1199px)';
+    $md:'only screen and (min-width: 768px) and (max-width: 991px)';
+    $sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
+    $xs:'(max-width: 575px)';
+
+    // For Small Devices
+    $laptop: 'only screen and (max-width: 1199px)';
+    $tablet: 'only screen and (max-width: 991px)';
+    $mobile: 'only screen and (max-width: 767px)';
+    
+    // FOR Big Devices
+
+// Extra Responsive
+
+    $medium_device : 'only screen and (min-width: 992px) and (max-width: 1200px)';
+    $tab_device:'only screen and (min-width: 768px) and (max-width: 991px)';
+    $large_mobile: 'only screen and (min-width: 576px) and (max-width: 767px)';
+    $tab: '(max-width: 991px)';
+    $small_mobile:'(max-width: 576px)';
+    $xs_mobile:'(max-width: 420px)';
+    $sm_mobile:'only screen and (min-width: 421px) and (max-width: 575px)';
+    $big_screen:'only screen and (min-width: 1200px) and (max-width: 1440px)';
+    $extra_big_screen: 'only screen and (min-width: 1200px) and (max-width: 3640px)';
+
+
+// More Extra Responsive
+    $large_device_2:'(min-width: 1501px) and (max-width: 1700px)';
+
+    $large1:'(min-width: 1200px) and (max-width: 1400px)';
+
+    $large_device:'(min-width: 1200px) and (max-width: 1600px)';
+    $mid_device:'(min-width: 992px) and (max-width: 1200px)';
+    $tablet_device:'(min-width: 768px) and (max-width: 991px)';
+    $mobile_device:'(max-width: 767px)';
+    $large_mobile:'only screen and (min-width: 480px) and (max-width: 767px)';
+
+
+// Element Page btn
+@import 'color';
+$white_color:#fff;
+.boxed-btn {
+	background: $base-color;
+    color:      $base-color !important;
+    
+	display: inline-block;
+	padding: 18px 44px;
+	font-family: $font_1;
+	font-size: 14px;
+    font-weight: 400;
+    border: 0;
+    border: 1px solid $primary-color;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover{
+        background: $primary-color;
+        color: $black_color !important;
+        border: 1px solid $primary-color;
+    }
+    &:focus{
+        outline: none;
+    }
+    &.large-width{
+        width: 220px;
+    }
+}
+
+// .......................
+
+$font_stack_1: 'Playfair Display', serif;
+$font_stack_2: 'Poppins', sans-serif; 

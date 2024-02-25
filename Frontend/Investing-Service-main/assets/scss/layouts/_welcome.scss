@@ -1,0 +1,41 @@
+/********************** Welcome Section ************************/
+.welcome-slider {
+    margin: 40px 0;
+    .welcome-sec {
+        .pt-welcome-sec-title { font-size: $heading-info; font-weight: $font-weight-medium; color: $dark-color; }
+        .pt-welcome-sec-description { color: $text-color; }
+        .pt-line {
+            margin: 30px 0;
+            height: 2px;
+            // width: 12%;
+            width: 98px;
+            background-color: $line-color-3;
+        }
+        p {
+            margin: 0 0 40px 0;
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+    
+        .slick-active  button {
+            background-color: $primary-color;
+        }
+            
+        li {
+            padding: 0 3px;
+            button {
+                border: 0;
+                border-radius: 100%;
+                font-size: 0;
+                height: 12px;
+                width: 12px;
+                background-color: $line-color-3;  
+           }
+        }
+    }
+}

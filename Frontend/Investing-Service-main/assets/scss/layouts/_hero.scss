@@ -1,0 +1,64 @@
+/************************* Hero_Section ****************************/
+.hero-slider {
+    .hero-parent {
+        width: 100%;
+        height: 600px !important;
+        background: url('../../images/photo2.jpg');
+        z-index: 2;
+
+        .hero-overlay {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+        
+            color: $base-color;
+            height: inherit;
+            background-color: $overlay-opacity;
+
+            .hero-child {
+                width: 50%;
+                padding-left: 16px;
+                margin-bottom: 120px;
+
+                .pt-hero-sec-title{
+                    display: flex;
+                    align-items: center;
+                    
+                    color: $base-color;
+                    font-size: $heading-font;
+                    font-weight: $font-weight-normal;
+                    margin-bottom: 15px;
+                }
+            
+                .pt-hero-sec-description {
+                    width: 55%;
+                    color: $base-color;
+
+                    line-height: $line-height-sm;
+                    // margin-bottom: 15px;
+                    margin-bottom: 20px;
+                }
+                
+                .pt-button { width: 130px; }
+
+                @media #{$mobile} {
+                    width: 100%;
+                }
+                @media #{$tablet} {
+                    width: 80%;
+                }
+            } 
+            
+        }
+        
+    }
+
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+@import "../libs/color";
+@import "../libs/variable";
+
+// RESET
+// *, *:before, *:after {
+//     box-sizing: border-box;
+// }
+
+// html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+//     margin: 0;
+//     padding: 0;
+//     border: 0;
+//     font-size: 100%;
+//     font: inherit;
+// }
+
+// ol, ul {
+//     list-style: none;
+// }
+
+
+
+body {
+    font-family: $font_2;
+    // font-size: $body_font_size;
+}
+
+// h1 {
+//     font-size: 30px;
+// }

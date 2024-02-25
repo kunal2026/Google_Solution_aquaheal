@@ -1,0 +1,103 @@
+
+header {
+    .pt-top-header {
+        background-color: $black_color;
+        .pt-top-header-sec {
+            a {
+                text-decoration: none;
+                color: $base-color;
+                padding: 8px 10px;
+            }
+            .pt-top-header-title {
+                background-color: $dark-primary-color;
+                padding: 0 10px;
+                a {
+                    margin: 0 10px 0 10px;
+                    font-weight: 500;
+                    font-size: $top-heading;
+                    i {
+                        padding: 0 10px 0 0; 
+                    }
+
+                    svg {
+                        height: 16px;
+                        width: 16px;
+                        margin-right: 14px;
+                        fill: $base-color;
+                    }
+                }
+
+                @media #{$mobile} {
+                    width: 100%;
+                    // display: flex;
+                    justify-content: space-between;
+                }
+
+            }
+            .pt-top-header-social {
+                a {
+                  svg {
+                        fill: $base-color;
+                    }
+                }
+
+                @media #{$mobile} {
+                    width: 100%;
+                    // display: flex;
+                    justify-content: space-between;
+                    padding: 0 20px;
+                }
+            }
+        }
+    }
+
+    .pt-main-header {
+        .pt-main-header-sec {
+            
+            .pt-main-header-sec-nav { //navbar 
+                // width: 100%;
+                padding: 0 10px 0 0;
+
+                .pt-main-header-a.active { color: $red; }
+                .pt-main-header-a {
+                    padding: 32px 16px;
+                    text-decoration: none;
+                    color: $light-color;
+                    font-size: $blogheading;
+                    font-weight: $font-weight-medium;
+                }
+                .pt-main-header-a:hover {
+                   color: $extra-light;
+                }
+
+                .navbar-brand {
+                    font-size: $h1-font-size;
+                    font-family: $font_3;
+                    color: $black;
+                    // padding: 32px 16px;
+                    padding: 28px 16px;
+                    letter-spacing: 1.6px;
+                    span {
+                        color: $primary-color
+                    }
+                }
+
+                @media #{$tablet} {
+                   // Navbar   
+                }
+            }
+            .pt-main-header-search {
+                position: relative;
+                padding: 0 0 0 16px;
+                .pt-main-header-form {
+                    font-size: $blogheading;
+                }
+                .pt-main-header-img-search {
+                    position: absolute;
+                    top: 8px;
+                    left: 164px;
+                }
+            }
+        }
+    } 
+}

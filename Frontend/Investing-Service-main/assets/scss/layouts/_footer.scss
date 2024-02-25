@@ -1,0 +1,74 @@
+/********************** Footer Section ************************/
+footer {
+    background-color: $footer_bg-color;
+    .footer-sec {
+        .footer-row {
+
+            // padding: 50px 0;
+            padding: 90px 0;
+            line-height: $line-height-sm;
+
+            .pt-footer-col-sec:not(:last-child) {
+                border-right: 1px solid $footer-border-right-color;
+            }
+            
+
+            .pt-footer-sec-title { color: $white; margin-bottom: 20px; font-weight: $font-weight-normal; }
+            .pt-footer-sec-description  { 
+                color: $footer_p-color; 
+                margin-bottom: 10px; 
+                
+            }
+            .pt-footer-sec-description-form {
+                margin: 30px 0;
+                .form-control { border-radius: 0; }
+            }
+            .pt-footer-sec-details {
+                margin-top: 30px;
+                .pt-footer-sec-details-description {
+                    svg {
+                        height: 15px;
+                        width: 15px;
+                        margin-top: 6px;
+                        fill: $base-color;
+                        margin-right: 12px;
+                    }
+                }
+            }
+            
+            .pt-footer-sec-title { font-size: $heading-info; }
+            .pt-footer-col-contact { padding: 0 80px; }
+            .pt-footer-col-service { padding: 0 50px; } 
+            
+            .pt-footer-social {
+                a { margin-right: 15px; }
+                svg {
+                    fill : $base-color;
+                }
+            }
+
+            @media #{$tablet} {
+                .pt-footer-col-sec:not(:last-child) {
+                    // border-right: 1px solid #727479;
+                    border-right: 0;
+                }
+
+                .pt-footer-col-contact, .pt-footer-col-service {
+                    padding: 0 15px;
+                }
+                
+            }
+        }
+
+        .pt-footer-copyright {
+            // h1 { color: $white; margin-bottom: 20px;}
+            // p  { color: $footer_p-color; margin-bottom: 10px;}
+            padding: 20px 0;
+            svg { fill: $base-color; }
+            .pt-footer-copyright-title { color: $footer_p-color; margin: 0; padding-left: 5px; }
+        }
+        
+    }
+}
+
+
