@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waterborne Disease Prediction Chatbot</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .chat-container {
+            width: 400px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            border-bottom: 2px solid #0056b3;
+        }
+
+        .chat-body {
+            padding: 15px;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .user-message {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            max-width: 80%;
+            align-self: flex-end;
+        }
+
+        .bot-message {
+            background-color: #ecf0f1;
+            color: #333;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            max-width: 80%;
+            align-self: flex-start;
+        }
+
+        .chat-input {
+            width: calc(100% - 30px);
+            padding: 15px;
+            border: none;
+            border-top: 2px solid #0056b3;
+            outline: none;
+            margin: 0 15px;
+            border-radius: 0 0 15px 15px;
+            font-size: 16px;
+        }
+
+        .send-button {
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 0 0 15px 15px;
+            font-size: 18px;
+        }
+
+        .disease-prone {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .not-disease-prone {
+            color: #2ecc71;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">Waterborne Disease Prediction</div>
+        <div class="chat-body" id="chat-body">
+            <div class="bot-message">Hello! I'm here to help you predict waterborne diseases in a particular state. Please provide the details.[to close chat write 'bye']</div>
+        </div>
+        <input type="text" id="user-input" class="chat-input" placeholder="Type your message...">
+        <button onclick="sendMessage()" class="send-button">Send</button>
+    </div>
+
+    <script>
+        function sendMessage() {
+            var userInput = document.getElementById("user-input").value;
+            var chatBody = document.getElementById("chat-body");
+
+            var userMessageDiv = document.createElement("div");
+            userMessageDiv.className = "user-message";
+            userMessageDiv.innerHTML = userInput;
+            chatBody.appendChild(userMessageDiv);
+
+            if (userInput.toLowerCase() === 'bye') {
+                var botMessageDiv = document.createElement("div");
+                botMessageDiv.className = "bot-message";
+                botMessageDiv.innerHTML = "Goodbye! If you have more questions, feel free to ask.";
+                chatBody.appendChild(botMessageDiv);
+                document.getElementById("user-input").disabled = true;
+                document.querySelector(".send-button").disabled = true;
+            } else {
+                var botMessageDiv = document.createElement("div");
+                botMessageDiv.className = "bot-message";
+                var wqi = generateRandomWQI();
+                var isDiseaseProne = wqi <= 4;
+                var message = "Water Quality Index (WQI) for " + userInput + ": " + wqi +
+                    " - This area is " + (isDiseaseProne ? "<span class='disease-prone'>disease-prone</span>" : "<span class='not-disease-prone'>not disease-prone</span>");
+                botMessageDiv.innerHTML = message;
+                chatBody.appendChild(botMessageDiv);
+            }
+
+            document.getElementById("user-input").value = "";
+        }
+
+        function generateRandomWQI() {
+            return Math.floor(Math.random() * 10) + 1;
+        }
+    
+    function predictPotability() {
+        var ph = document.getElementById('ph').value;
+        var hardness = document.getElementById('Hardness').value;
+        var solids = document.getElementById('Solids').value;
+        var chloramines = document.getElementById('Chloramines').value;
+        var sulfate = document.getElementById('Sulfate').value;
+        var conductivity = document.getElementById('Conductivity').value;
+        var organic_carbon = document.getElementById('Organic_carbon').value;
+        var trihalomethanes = document.getElementById('Trihalomethanes').value;
+        var turbidity = document.getElementById('Turbidity').value;
+
+       
+        fetch('/predict', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                ph: ph,
+                Hardness: Hardness,
+                Solids: Solids,
+                Chloramines: Chloramines,
+                Sulfate: Sulfate,
+                Conductivity: Conductivity,
+                Organic_carbon: Organic_carbon,
+                Trihalomethanes: Trihalomethanes,
+                Turbidity: Turbidity
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('predictionResult').innerText = 'Predicted Potability: ' + data.prediction;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+    </script>
+</body>
+</html>
